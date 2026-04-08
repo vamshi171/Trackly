@@ -1,0 +1,325 @@
+{
+  "info": {
+    "name": "ExpenseTracker API",
+    "description": "Complete API testing collection for ExpenseTracker Spring Boot backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "AUTH",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"username\": \"johndoe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "description": "Register a new user and get JWT token"
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"johndoe\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "description": "Login and get JWT token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CATEGORIES",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            },
+            "description": "Fetch all categories for authenticated user"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Food\",\n  \"description\": \"Food and dining expenses\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            },
+            "description": "Create a new category"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/categories/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "categories",
+                "1"
+              ]
+            },
+            "description": "Delete a category by ID"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "EXPENSES",
+      "item": [
+        {
+          "name": "Get All Expenses",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/expenses",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "expenses"
+              ]
+            },
+            "description": "Fetch all expenses for authenticated user"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Expense",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Lunch at restaurant\",\n  \"amount\": 250.50,\n  \"categoryId\": 1,\n  \"type\": \"EXPENSE\",\n  \"note\": \"Team lunch meeting\",\n  \"date\": \"2026-04-06\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/expenses",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "expenses"
+              ]
+            },
+            "description": "Create a new expense entry"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Income",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Salary received\",\n  \"amount\": 50000,\n  \"categoryId\": null,\n  \"type\": \"INCOME\",\n  \"note\": \"Monthly salary\",\n  \"date\": \"2026-04-01\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/expenses",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "expenses"
+              ]
+            },
+            "description": "Create income entry"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Expense",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Lunch at restaurant - Updated\",\n  \"amount\": 300,\n  \"categoryId\": 1,\n  \"type\": \"EXPENSE\",\n  \"note\": \"Updated lunch note\",\n  \"date\": \"2026-04-06\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/expenses/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "expenses",
+                "1"
+              ]
+            },
+            "description": "Update an existing expense"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Expense",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/expenses/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "expenses",
+                "1"
+              ]
+            },
+            "description": "Delete an expense by ID"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080/api",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

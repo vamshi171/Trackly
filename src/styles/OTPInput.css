@@ -1,0 +1,126 @@
+/* ===== OTP Input Component Styles ===== */
+
+.otp-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.otp-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.otp-input {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.otp-input:hover {
+    border-color: #4f46e5;
+}
+
+.otp-input:focus {
+    border-color: #4f46e5;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.otp-input:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.otp-input-error {
+    border-color: #ef4444 !important;
+    background-color: #fff5f5;
+}
+
+.otp-input-error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.otp-error-message {
+    color: #ef4444;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.otp-actions {
+    text-align: center;
+    min-height: 20px;
+}
+
+.otp-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.otp-clear-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #6b7280;
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.otp-clear-btn:hover {
+    color: #1f2937;
+    border-color: #9ca3af;
+    background-color: #f3f4f6;
+}
+
+.otp-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 0;
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 640px) {
+    .otp-inputs {
+        gap: 8px;
+    }
+
+    .otp-input {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+}
