@@ -1,4 +1,4 @@
-# 📚 EXPENSETRACKER - COMPLETE PROJECT DOCUMENTATION
+# 📚 TRACKLY - COMPLETE PROJECT DOCUMENTATION
 
 **Version:** 1.0 | **Status:** Production-Ready | **Created:** April 8, 2026
 
@@ -26,9 +26,9 @@
 
 ## 📋 Project Overview
 
-### What is ExpenseTracker?
+### What is Trackly?
 
-ExpenseTracker is a **full-stack personal and business expense management application** that enables users to:
+Trackly is a **full-stack personal and business expense management application** that enables users to:
 - Track income and expenses in real-time
 - Manage budgets and set spending limits
 - Categorize transactions for better organization
@@ -55,7 +55,7 @@ Most people struggle to track their expenses effectively. They need:
 - Admin oversight for organizational expenses
 
 ### Solution Delivered
-ExpenseTracker provides:
+Trackly provides:
 1. **User-Friendly Interface** - Aesthetic, intuitive expense management
 2. **Real-Time Analytics** - Charts, trends, and spending insights
 3. **Budget Management** - Set limits, get warnings when exceeded
@@ -762,7 +762,7 @@ DELETE /api/admin/users/{id}
 #### JWT Token Structure
 ```json
 {
-  "iss": "ExpenseTracker",
+  "iss": "Trackly",
   "exp": 1712666400,
   "iat": 1712580000,
   "sub": "john_doe",
@@ -811,7 +811,7 @@ DELETE /api/admin/users/{id}
 
 ### Frontend Structure
 ```
-ExpenseTracker/ (React Frontend)
+Trackly/ (React Frontend)
 ├── src/
 │   ├── components/
 │   │   ├── OTPInput.jsx (NEW)
@@ -858,9 +858,9 @@ ExpenseTracker/ (React Frontend)
 
 ### Backend Structure
 ```
-ExpenseTracker/ (Spring Boot Backend)
+Trackly/ (Spring Boot Backend)
 ├── src/main/java/com/finance/
-│   ├── ExpenseTrackerApplication.java (Main class)
+│   ├── TracklyApplication.java (Main class)
 │   ├── auth/
 │   │   ├── AdminRegistrationValidator.java
 │   │   └── ...
@@ -929,7 +929,7 @@ ExpenseTracker/ (Spring Boot Backend)
 
 #### Step 1: Clone Repository
 ```bash
-cd c:\Users\YourUsername\E-commerce\ application\ExpenseTracker
+cd c:\Users\YourUsername\E-commerce\ application\Trackly
 ```
 
 #### Step 2: Configure Database
@@ -963,7 +963,7 @@ Server will start at `http://localhost:8080`
 
 #### Step 1: Clone/Navigate to Frontend
 ```bash
-cd c:\Users\YourUsername\ExpenseTracker
+cd c:\Users\YourUsername\Trackly
 ```
 
 #### Step 2: Install Dependencies
@@ -1023,7 +1023,7 @@ INSERT INTO users (username, email, password, name, role) VALUES
 #### Backend Dockerfile
 ```docker
 FROM adoptopenjdk:17-jre-hotspot
-COPY target/ExpenseTracker-0.0.1-SNAPSHOT.jar app.jar
+COPY target/Trackly-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
 ```
 
@@ -1058,7 +1058,7 @@ SMTP_PASSWORD=your-app-password
 #### Frontend (.env)
 ```env
 VITE_API_URL=https://api.yourserver.com
-VITE_APP_NAME=ExpenseTracker
+VITE_APP_NAME=Trackly
 ```
 
 ---
@@ -1190,7 +1190,7 @@ npm test
 
 ## 📞 Support & Contact
 
-- **Email:** support@expensetracker.com
+- **Email:** support@trackly.com
 - **Issues:** GitHub Issues
 - **Discussion:** GitHub Discussions
 - **Documentation:** See README.md files

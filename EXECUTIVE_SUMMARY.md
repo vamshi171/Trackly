@@ -1,4 +1,4 @@
-# 📋 EXPENSETRACKER - EXECUTIVE SUMMARY
+# 📋 TRACKLY - EXECUTIVE SUMMARY
 
 **Project Status:** ✅ PRODUCTION READY | **Version:** 1.0 | **Date:** April 8, 2026
 
@@ -6,7 +6,7 @@
 
 ## 🎯 Project Overview (30-second read)
 
-**ExpenseTracker** is a full-stack web application for personal and business expense management. It enables users to track income/expenses, manage budgets, generate reports, and provides admins with system-wide oversight. Built with React (frontend) and Spring Boot (backend), it features JWT-based authentication and role-based access control.
+**Trackly** is a full-stack web application for personal and business expense management. It enables users to track income/expenses, manage budgets, generate reports, and provides admins with system-wide oversight. Built with React (frontend) and Spring Boot (backend), it features JWT-based authentication and role-based access control.
 
 **Use Cases:**
 - Track personal finances
@@ -148,14 +148,14 @@ Spring Boot 4.0.5 + Java 17
 ### What's Where
 
 ```
-Frontend: c:\Users\YourUsername\ExpenseTracker\
+Frontend: c:\Users\YourUsername\Trackly\
 ├── src/components/        (30+ React components)
 ├── src/pages/             (12 page components)
 ├── src/utils/             (14 utility functions)
 ├── src/styles/            (2,000 lines CSS)
 └── src/api/               (Axios configuration)
 
-Backend: c:\Users\YourUsername\E-commerce application\ExpenseTracker\
+Backend: c:\Users\YourUsername\E-commerce application\Trackly\
 ├── src/main/java/com/finance/
 │   ├── controller/        (5 REST controllers)
 │   ├── service/           (5 services)

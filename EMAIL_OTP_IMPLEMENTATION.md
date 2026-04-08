@@ -1,7 +1,7 @@
 # ✅ EMAIL OTP IMPLEMENTATION COMPLETE
 
 ## Overview
-Full production-ready Email OTP system has been implemented across your ExpenseTracker application for:
+Full production-ready Email OTP system has been implemented across your Trackly application for:
 - ✅ Registration verification (for company emails/admins)
 - ✅ Password reset (all users)
 - ✅ Admin verification (future: login 2FA)

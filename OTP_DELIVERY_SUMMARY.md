@@ -2,7 +2,7 @@
 
 ## Project Status: ✅ COMPLETE (Frontend)
 
-A production-ready Email OTP system has been successfully implemented for your ExpenseTracker application.
+A production-ready Email OTP system has been successfully implemented for your Trackly application.
 
 ---
 
@@ -344,7 +344,7 @@ This implementation demonstrates:
 
 ### Test Locally
 ```bash
-cd c:\Users\Vamshi Krishna\ExpenseTracker
+cd c:\Users\Vamshi Krishna\Trackly
 npm start
 ```
 

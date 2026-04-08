@@ -1,4 +1,4 @@
-# 🎯 WHY I BUILT EXPENSETRACKER - A Complete Narrative
+# 🎯 WHY I BUILT TRACKLY - A Complete Narrative
 
 ## My Journey & Motivation
 
@@ -22,7 +22,7 @@ I wanted to build something that:
 
 ## What I Built
 
-### ExpenseTracker - The Solution
+### Trackly - The Solution
 
 A comprehensive web application that enables users to:
 - ✅ **Track** - Log income and expenses in real-time
@@ -531,7 +531,7 @@ It's not because it has the most features. It's because:
 
 ## The Bottom Line
 
-**ExpenseTracker is more than a project. It's a statement of capability.**
+**Trackly is more than a project. It's a statement of capability.**
 
 It says: *"I can build real systems that solve real problems."*
 

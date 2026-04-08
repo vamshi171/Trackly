@@ -1,6 +1,6 @@
 # 📚 DOCUMENTATION INDEX & READING GUIDE
 
-**Your Complete ExpenseTracker Documentation Navigator**
+**Your Complete Trackly Documentation Navigator**
 
 ---
 

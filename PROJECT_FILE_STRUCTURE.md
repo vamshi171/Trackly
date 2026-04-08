@@ -3,7 +3,7 @@
 ## Updated Workspace Layout
 
 ```
-c:\Users\Vamshi Krishna\ExpenseTracker\
+c:\Users\Vamshi Krishna\Trackly\
 │
 ├── 📄 QUICK_START_OTP.md ✨ NEW
 │   └─ Quick reference guide (1-page)
@@ -77,7 +77,7 @@ c:\Users\Vamshi Krishna\ExpenseTracker\
 │   ├── eslint.config.js
 │   ├── index.html
 │   ├── README.md
-│   └── ExpenseTracker-API.postman_collection.json
+|   └── Trackly-API.postman_collection.json
 │
 └── 📊 Documentation Summary
 
