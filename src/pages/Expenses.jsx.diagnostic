@@ -1,0 +1,38 @@
+// Add this to the fetchExpenses function to debug the API response
+
+const fetchExpenses = async () => {
+    try {
+        const res = await api.get("/expenses");
+        
+        // DEBUG: Log the entire response
+        console.log("📊 Full API Response:", res.data);
+        console.log("Data field structure:", res.data.data);
+        
+        // Check if it's a Page object or array
+        if (res.data.data?.content) {
+            console.log("✅ Response is a Page object with content:", res.data.data.content);
+            // Handle Page response
+            const expensesData = res.data.data.content;
+            const normalized = expensesData.map((expense) => ({
+                ...expense,
+                categoryName: expense.categoryName || "General"
+            }));
+            setExpenses(normalized);
+        } else if (Array.isArray(res.data.data)) {
+            console.log("✅ Response is an array:", res.data.data);
+            // Handle array response
+            const normalized = res.data.data.map((expense) => ({
+                ...expense,
+                categoryName: expense.categoryName || "General"
+            }));
+            setExpenses(normalized);
+        } else {
+            console.error("❌ Unexpected response format:", res.data.data);
+            setExpenses([]);
+        }
+    } catch (err) {
+        console.error("❌ Error fetching expenses:", err);
+        console.error("Error details:", err.response?.data);
+        setExpenses([]);
+    }
+};

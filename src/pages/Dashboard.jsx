@@ -36,7 +36,16 @@ export default function Dashboard() {
                     api.get("/categories")
                 ]);
 
-                const expenses = Array.isArray(expensesRes.data.data) ? expensesRes.data.data : [];
+                // Handle Page object response from backend
+                let expenses = [];
+                if (expensesRes.data.data?.content) {
+                    // Backend returns Page<ExpenseDTO> with content array
+                    expenses = expensesRes.data.data.content;
+                } else if (Array.isArray(expensesRes.data.data)) {
+                    // Direct array response
+                    expenses = expensesRes.data.data;
+                }
+                
                 const categories = Array.isArray(categoriesRes.data.data) ? categoriesRes.data.data : [];
 
                 // Normalize expenses

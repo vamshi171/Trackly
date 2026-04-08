@@ -23,7 +23,16 @@ export default function Reports() {
         try {
             setLoading(true);
             const res = await api.get("/expenses");
-            const expensesData = Array.isArray(res.data.data) ? res.data.data : [];
+            
+            // Handle Page object response from backend
+            let expensesData = [];
+            if (res.data.data?.content) {
+                // Backend returns Page<ExpenseDTO> with content array
+                expensesData = res.data.data.content;
+            } else if (Array.isArray(res.data.data)) {
+                // Direct array response
+                expensesData = res.data.data;
+            }
             
             // Normalize data
             const normalized = expensesData.map((exp) => ({
